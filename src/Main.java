@@ -4,11 +4,14 @@ public class Main {
         Cliente gabriel = new Cliente();
         gabriel.setNome("Gabriel");
 
+
         Conta cc = new ContaCorrente(gabriel);
         Conta poupanca = new ContaPoupanca(gabriel);
 
+        cc.gerarCartao();
         cc.depositar(100);
         cc.transferir(50, poupanca);
+
 
         cc.imprimirExtrato();
         poupanca.imprimirExtrato();
